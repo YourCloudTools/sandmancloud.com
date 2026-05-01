@@ -90,6 +90,11 @@
     }
 
     function init() {
+        var y = document.getElementById("promo-footer-year");
+        if (y) {
+            y.textContent = String(new Date().getFullYear());
+        }
+
         var calc = document.querySelector(".promo-savings-calc");
         if (!calc) return;
 

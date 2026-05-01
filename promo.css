@@ -526,9 +526,109 @@ body {
     line-height: 1.4;
 }
 
+.promo-footer {
+    padding-bottom: 2.5rem;
+}
+
+.promo-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    text-align: left;
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+}
+
+.promo-footer-block {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.75rem;
+    padding: 1rem 1.1rem;
+}
+
+.promo-footer-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 0.4rem;
+}
+
+.promo-footer-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 0.35rem;
+    line-height: 1.45;
+}
+
+.promo-footer-text a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.45);
+    text-underline-offset: 0.15em;
+}
+
+.promo-footer-text a:hover {
+    text-decoration-color: rgba(255, 255, 255, 0.85);
+}
+
+.promo-footer-hint {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.promo-footer-impressum {
+    margin-top: 1.75rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.promo-footer-legal {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0 0 0.35rem;
+    line-height: 1.5;
+}
+
+.promo-footer-legal-label {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 0.2rem;
+}
+
+.promo-footer-address {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-style: normal;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.promo-footer-meta {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 1.75rem 0 0;
+}
+
 @media (max-width: 900px) {
     .promo-pricing {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .promo-footer-grid {
+        grid-template-columns: 1fr;
+        max-width: 22rem;
     }
 }
 
