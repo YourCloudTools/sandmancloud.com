@@ -96,25 +96,46 @@
         <div class="promo-container">
             <p class="promo-section-title">Pricing &amp; Estimated Savings</p>
             <div class="promo-pricing">
-                <div class="promo-tier">
+                <div class="promo-tier" data-tier-key="startup" data-vm-max="10" data-tier-price="99">
                     <p class="promo-tier-name">Startup</p>
                     <p class="promo-tier-vms">Up to 10 VMs</p>
+                    <p class="promo-tier-price">€99.00</p>
                     <a href="#" class="promo-tier-cta promo-tier-cta--ghost">Get Started</a>
                 </div>
-                <div class="promo-tier promo-tier--recommended">
+                <div class="promo-tier promo-tier--recommended" data-tier-key="scaleup" data-vm-max="50" data-tier-price="399">
                     <span class="promo-tier-badge">Recommended</span>
                     <p class="promo-tier-name">Scaleup</p>
                     <p class="promo-tier-vms">Up to 50 VMs</p>
+                    <p class="promo-tier-price">€399.00</p>
                     <a href="#" class="promo-tier-cta promo-tier-cta--primary">Get Started</a>
                 </div>
-                <div class="promo-tier">
+                <div class="promo-tier" data-tier-key="corporate" data-tier-price="1999">
                     <p class="promo-tier-name">Corporate</p>
                     <p class="promo-tier-vms">Unlimited VMs</p>
-                    <a href="mailto:info@yourcloudtools.com" class="promo-tier-cta promo-tier-cta--primary">Contact Us</a>
+                    <p class="promo-tier-price">€1,999.00</p>
+                    <a href="#" class="promo-tier-cta promo-tier-cta--ghost">Get Started</a>
                 </div>
             </div>
-            <p class="promo-footnote">Estimates based on D-series Azure VMs running 24/7 with ~60% off-hours shutdown. Actual savings depend on VM size, count, and schedule.</p>
+            <div class="promo-savings-calc">
+                <div class="promo-savings-calc-row">
+                    <div class="promo-savings-calc-controls">
+                        <p class="promo-savings-calc-title">Savings calculator</p>
+                        <div class="promo-savings-calc-count">
+                            <label class="promo-savings-calc-count-label" for="promo-vm-count">Number of VMs</label>
+                            <input class="promo-savings-calc-input" id="promo-vm-count" type="number" min="1" max="500" value="10" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="promo-savings-calc-result" aria-live="polite">
+                        <p class="promo-tier-savings-label promo-savings-calc-savings-caption">Estimated monthly savings</p>
+                        <p class="promo-savings-calc-amount" id="promo-calc-savings">&mdash;</p>
+                        <p class="promo-savings-calc-note" id="promo-calc-note" hidden></p>
+                    </div>
+                </div>
+            </div>
+            <p class="promo-savings-calc-vm-note">4 vCPU, 32 GB (~€200 / VM / month)</p>
+            <p class="promo-footnote">Calculator uses an illustrative ~€200 per VM per month (4 vCPU, 32 GB; same numeric basis as tier prices). Formula: hourly VM cost × 22 weekdays × 8 hours off-hours × VM count, minus tier price. Estimates assume D-series Azure&ndash;style VMs running 24/7 with modeled off-hours shutdown; actual savings depend on size, count, and schedule.</p>
         </div>
     </div>
+    <script src="promo.js" defer></script>
 </body>
 </html>
